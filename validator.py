@@ -27,9 +27,9 @@ def validate_json(data: dict, max_lines: int):
         if "old" in corr and not isinstance(corr["old"], str):
             raise ValueError("Champ 'old' doit être une chaîne si présent")
 
-        # Conseil d'amélioration : vérifier que "new" n'est pas vide
-        if not corr["new"].strip():
-            raise ValueError("Correction invalide: champ 'new' vide")
+        # Vérifier que "new" n'est pas vide sauf pour delete
+        if corr["type"] != "delete" and not corr["new"].strip():
+            raise ValueError("Correction invalide: champ 'new' vide pour une opération autre que delete")
 
     if "final_suggestion" not in data or not isinstance(data["final_suggestion"], str):
         raise ValueError("Champ 'final_suggestion' manquant ou invalide")

@@ -1,5 +1,6 @@
 from pathlib import Path
 import shutil
+import subprocess
 
 def apply_corrections(script_path: str, corrections: list):
     script = Path(script_path)
@@ -14,7 +15,7 @@ def apply_corrections(script_path: str, corrections: list):
         line_index = corr["line_number"] - 1  # JSON est 1-based
         applied = False
 
-        # Vérification que "new" n'est pas vide
+        # Vérification que "new" n'est pas vide sauf pour delete
         if corr["type"] in ["replace", "insert"] and not corr["new"].strip():
             print(f"Correction ignorée car 'new' est vide : {corr}")
             continue
@@ -48,5 +49,12 @@ def apply_corrections(script_path: str, corrections: list):
 
     # Réécriture du fichier corrigé
     script.write_text("\n".join(lines), encoding="utf-8")
+
+    # Post-traitement automatique avec black
+    try:
+        subprocess.run(["black", str(script)], check=True)
+        print(f"Fichier formaté avec black : {script}")
+    except Exception as e:
+        print(f"Impossible de formater avec black : {e}")
 
     return str(script), str(backup)

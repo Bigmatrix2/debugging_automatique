@@ -1,0 +1,15 @@
+2025-11-19 14:37:38 [INFO] Exécution du script: buggy_script.py
+2025-11-19 14:37:38 [INFO] stdout: 
+2025-11-19 14:37:38 [INFO] stderr:   File "C:\Users\johna\Desktop\cours Hetic\MASTER 2\Cr\ufffdation d'agent\debug_auto\debugging_automatique\buggy_script.py", line 6
+    def greet(name)
+                   ^
+SyntaxError: expected ':'
+
+2025-11-19 14:37:38 [INFO] returncode: 1
+2025-11-19 14:41:28 [INFO] Réponse IA reçue:
+2025-11-19 14:41:28 [INFO] {'uncertain': False, 'corrections': [{'type': 'insert', 'line_number': 4, 'new': ':', 'reason': 'Missing colon after function definition'}, {'type': 'replace', 'line_number': 6, 'old': 'maths   # Erreur : le module s\'appelle "math"', 'new': 'import math', 'reason': 'Corrected import statement'}, {'type': 'replace', 'line_number': 9, 'old': "return a / c   # Erreur : variable 'c' non dfinie", 'new': 'return a / b', 'reason': 'Undefined variable corrected to actual argument'}, {'type': 'insert', 'line_number': 12, 'new': ';', 'reason': 'Missing semicolon at the end of the line'}, {'type': 'replace', 'line_number': 14, 'old': 'print "R\ufffdsultat:", result)', 'new': 'print("R\ufffdsultat:", result)', 'reason': 'Incorrect string formatting corrected to use raw strings'}], 'final_suggestion': 'import math; def greet(name): print("Bonjour " + name); def divide(a, b): return a / b; def main():\n    result = divide(10, 2); print("R\ufffdsultat:", result);\n    greet("Alice");\n    print("La racine carr\ufffde de 16 est:", math.sqrt(16));\n    for i in range(5):\n        print("It\ufffdtation", i);\n    print("Fin du programme")'}
+2025-11-19 14:41:28 [INFO] Correction: ligne 4 | insert | Missing colon after function definition
+2025-11-19 14:41:28 [INFO] Correction: ligne 6 | replace | Corrected import statement
+2025-11-19 14:41:28 [INFO] Correction: ligne 9 | replace | Undefined variable corrected to actual argument
+2025-11-19 14:41:28 [INFO] Correction: ligne 12 | insert | Missing semicolon at the end of the line
+2025-11-19 14:41:28 [INFO] Correction: ligne 14 | replace | Incorrect string formatting corrected to use raw strings

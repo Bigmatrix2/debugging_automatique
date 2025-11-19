@@ -7,7 +7,7 @@
     "max_corrections": 10
   },
   "ai": {
-    "model": "codellama",
+    "model": "llama3",
     "system_prompt": "context.txt",
     "user_prompt": "prompt.txt",
     "temperature": 0,
