@@ -38,12 +38,15 @@ Le fichier original est modifié automatiquement.
 <img width="560" height="727" alt="image" src="https://github.com/user-attachments/assets/140ac1b2-0054-4aa5-90af-0757395266c1" />
 
 5 SYSTEME DE PATCH INTELLIGENT
+
 <img width="690" height="277" alt="image" src="https://github.com/user-attachments/assets/7712fb31-cb30-450e-955b-adec4ae813cd" />
 
 6 LIMITES ET RISQUES
+
 <img width="1032" height="426" alt="image" src="https://github.com/user-attachments/assets/eb386b58-e5a3-4082-a3ee-ae0f63e29d56" />
 
 7 EXEMPLE DE JSON RETOURNE
+
 <img width="861" height="437" alt="image" src="https://github.com/user-attachments/assets/6629fa16-11ed-4ce0-b6e4-6d4d13c23700" />
 
 8 TECHNOLOGIES UTILISEES
