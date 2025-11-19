@@ -1,4 +1,4 @@
-1. Auto-Debugger Python (Ollama + Streamlit)
+1. AUTO-DEBUGGER (Ollama + Streamlit)
 
 Ce projet propose un système complet de **débogage automatique de scripts Python** en utilisant un modèle IA **local**, exécuté via **Ollama**, combiné à une interface utilisateur simple conçue avec **Streamlit**.
 
@@ -33,26 +33,26 @@ Le fichier original est modifié automatiquement.
 
 ---
 
-ARCHITECTURE DU PROJET
+4 ARCHITECTURE DU PROJET
 
 <img width="560" height="727" alt="image" src="https://github.com/user-attachments/assets/140ac1b2-0054-4aa5-90af-0757395266c1" />
 
-SYSTEME DE PATCH INTELLIGENT
+5 SYSTEME DE PATCH INTELLIGENT
 <img width="690" height="277" alt="image" src="https://github.com/user-attachments/assets/7712fb31-cb30-450e-955b-adec4ae813cd" />
 
-LIMITES ET RISQUES
+6 LIMITES ET RISQUES
 <img width="1032" height="426" alt="image" src="https://github.com/user-attachments/assets/eb386b58-e5a3-4082-a3ee-ae0f63e29d56" />
 
-EXEMPLE DE JSON RETOURNE
+7 EXEMPLE DE JSON RETOURNE
 <img width="861" height="437" alt="image" src="https://github.com/user-attachments/assets/6629fa16-11ed-4ce0-b6e4-6d4d13c23700" />
 
-TECHNOLOGIES UTILISEES
+8 TECHNOLOGIES UTILISEES
 Python 3
 Streamlit
 Ollama
 DeepSeek Coder
 
-Conclusion
+9 Conclusion
 Ce projet démontre comment :
 intégrer un LLM local dans un pipeline automatisé, exécuter du code de manière isolée et contrôlée,
 mettre en place un moteur de patch fiable, créer une interface complète,
