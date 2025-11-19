@@ -1,0 +1,28 @@
+{
+  "project": {
+    "name": "debugging_automatique",
+    "script_path": "buggy_script.py",
+    "venv_path": ".venv",
+    "backup_enabled": true,
+    "max_corrections": 10
+  },
+  "ai": {
+    "model": "codellama",
+    "system_prompt": "context.txt",
+    "user_prompt": "prompt.txt",
+    "temperature": 0,
+    "max_tokens": 1024,
+    "strict_json": true
+  },
+  "logging": {
+    "enabled": true,
+    "log_file": "logs/debugger.log",
+    "save_responses": true
+  },
+  "ui": {
+    "theme": "light",
+    "show_stdout": true,
+    "show_stderr": true,
+    "auto_apply": false
+  }
+}

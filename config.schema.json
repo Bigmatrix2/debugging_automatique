@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Debugger Config Schema",
+  "type": "object",
+  "properties": {
+    "project": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "script_path": { "type": "string" },
+        "venv_path": { "type": "string" },
+        "backup_enabled": { "type": "boolean" },
+        "max_corrections": { "type": "integer", "minimum": 1, "maximum": 10 }
+      },
+      "required": ["name", "script_path", "venv_path", "backup_enabled", "max_corrections"]
+    },
+    "ai": {
+      "type": "object",
+      "properties": {
+        "model": { "type": "string" },
+        "system_prompt": { "type": "string" },
+        "user_prompt": { "type": "string" },
+        "temperature": { "type": "number", "minimum": 0, "maximum": 1 },
+        "max_tokens": { "type": "integer", "minimum": 128, "maximum": 4096 },
+        "strict_json": { "type": "boolean" }
+      },
+      "required": ["model", "system_prompt", "user_prompt", "temperature", "max_tokens", "strict_json"]
+    },
+    "logging": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "log_file": { "type": "string" },
+        "save_responses": { "type": "boolean" }
+      },
+      "required": ["enabled", "log_file", "save_responses"]
+    },
+    "ui": {
+      "type": "object",
+      "properties": {
+        "theme": { "type": "string", "enum": ["light", "dark"] },
+        "show_stdout": { "type": "boolean" },
+        "show_stderr": { "type": "boolean" },
+        "auto_apply": { "type": "boolean" }
+      },
+      "required": ["theme", "show_stdout", "show_stderr", "auto_apply"]
+    }
+  },
+  "required": ["project", "ai", "logging", "ui"]
+}
